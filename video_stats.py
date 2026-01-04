@@ -1,6 +1,10 @@
 import requests 
 import json
-API_KEY = "AIzaSyAjwzDisU4h7gojuXfONnB7NPnHkLws9Mw"
+import os 
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path="./.env")
+API_KEY = os.getenv("API_KEY")
 CHANNEL_HANDLE = "MrBeast"
 
 def get_playlist_id():

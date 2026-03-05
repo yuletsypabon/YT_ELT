@@ -3,7 +3,6 @@ ARG PYTHON_VERSION=3.10
 
 FROM apache/airflow:${AIRFLOW_VERSION}-python${PYTHON_VERSION}
 
-
 ENV AIRFLOW_HOME=/opt/airflow
 
 COPY requirements.txt /

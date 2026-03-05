@@ -2,7 +2,7 @@ from airflow import DAG
 import pendulum 
 from datetime import datetime, timedelta 
 from api.video_stats import get_playlist_id, get_video_ids, extract_video_data, save_to_json    
-from airflow.operators.dagrun_operator import TriggerDagRunOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datawarehouse.dwh import staging_table, core_table
 from dataquality.soda import yt_elt_data_quality_check
 
